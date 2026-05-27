@@ -1,4 +1,8 @@
 package com.pluralsight.enums;
 
-public class CrustType {
+public enum CrustType {
+    THIN,
+    REGULAR,
+    THICK,
+    CAULIFLOWER
 }

@@ -1,4 +1,7 @@
 package com.pluralsight.enums;
 
-public class PizzaSize {
+public enum PizzaSize {
+    SMALL,
+    MEDIUM,
+    LARGE
 }

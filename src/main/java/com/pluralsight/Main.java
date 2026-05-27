@@ -1,12 +1,13 @@
 package com.pluralsight;
 
-
+import com.pluralsight.screens.HomeScreen;
 
 public class Main {
-    static void main() {
 
+    public static void main(String[] args) {
 
+        HomeScreen homeScreen = new HomeScreen();
+        homeScreen.display();
 
-
-        }
     }
+}

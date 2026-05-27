@@ -1,0 +1,33 @@
+package com.pluralsight.screens;
+
+import java.util.Scanner;
+
+public class HomeScreen {
+    static Scanner scanner = new Scanner(System.in);
+
+    public  void display(){
+
+        boolean isRunning = true;
+
+        while (isRunning) {
+            System.out.println("Welcome to PIZZA-Licious🍕 !");
+            System.out.println("1) Place an Order");
+            System.out.println("0) Exit");
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "1":
+                    OrderScreen orderScreen = new OrderScreen();
+                    orderScreen.display();
+                    break;
+
+                case "0":
+                    isRunning = false;
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+}
