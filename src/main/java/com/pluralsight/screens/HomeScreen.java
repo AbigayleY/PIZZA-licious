@@ -10,7 +10,8 @@ public class HomeScreen {
         boolean isRunning = true;
 
         while (isRunning) {
-            System.out.println("Welcome to PIZZA-Licious🍕 !");
+            System.out.println("\u001B[35m\nWelcome to PIZZA-Licious 🍕\u001B[0m");
+            System.out.println();
             System.out.println("1) Place an Order");
             System.out.println("0) Exit");
             String choice = scanner.nextLine();
