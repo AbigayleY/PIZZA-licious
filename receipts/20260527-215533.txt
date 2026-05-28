@@ -1,0 +1,45 @@
+
+ ----- | RECEIPT | -----
+LARGE THICK Pizza
+Meats:
+   - PEPPERONI (EXTRA) 
+   - SAUSAGE (EXTRA) 
+   - HAM (EXTRA) 
+   - BACON (EXTRA) 
+   - CHICKEN (EXTRA) 
+   - MEATBALL (EXTRA) 
+Cheeses:
+   - MOZZARELLA (EXTRA) 
+   - PARMESAN (EXTRA) 
+   - RICOTTA (EXTRA) 
+   - GOAT_CHEESE (EXTRA) 
+   - BUFFALO (EXTRA) 
+Toppings:
+   - ONIONS
+   - MUSHROOMS
+   - BELL_PEPPERS
+   - OLIVES
+   - TOMATOES
+   - SPINACH
+   - BASIL
+   - PINEAPPLE
+   - ANCHOVIES
+Sauces:
+   - MARINARA
+   - ALFREDO
+   - PESTO
+   - BBQ
+   - BUFFALO
+   - OLIVE_OIL
+Stuffed Crust
+
+--------------------
+Pizza Price: $61.25
+
+
+LARGE Diet Dr. Kelp drink - $3.0
+
+Garlic Knots = $1.50
+
+--------------------------
+ Grand Total: $65.75
