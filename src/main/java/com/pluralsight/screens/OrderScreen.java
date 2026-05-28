@@ -3,6 +3,7 @@ package com.pluralsight.screens;
 import com.pluralsight.enums.CrustType;
 import com.pluralsight.enums.PizzaSize;
 import com.pluralsight.enums.DrinkSize;
+import com.pluralsight.interfaces.OrderItem;
 import com.pluralsight.models.*;
 
 import java.util.Scanner;
@@ -20,34 +21,36 @@ public class OrderScreen {
         boolean ordering = true;
 
         while (ordering) {
+            System.out.println("==== | HOME SCREEN | ==== ");
             System.out.println("\n -----------------------------");
             System.out.println();
-            System.out.println("1) Add Pizza");
-            System.out.println("2) Add Drink");
-            System.out.println("3) Add Garlic Knots");
-            System.out.println("4) Checkout");
+            System.out.println("1) Add Item");
+            System.out.println("2) Checkout");
             System.out.println("0) Cancel Order");
             String choice = scanner.nextLine();
 
             switch (choice) {
                 case "1":
-                    addPizza();
+                    AddItemScreen addItemScreen =
+                            new AddItemScreen(scanner);
+
+                    OrderItem item =
+                            addItemScreen.createItem();
+
+                    if(item != null){
+                        order.addItem(item);
+                        System.out.println("Item added! ➕✅ ");
+                    }
                     break;
 
                 case "2":
-                    addDrink();
-                    break;
-
-                case "3":
-                    order.addItem(new GarlicKnots());
-                    break;
-
-                case "4":
-                    CheckoutScreen checkoutScreen = new CheckoutScreen(order);
+                    CheckoutScreen checkoutScreen =
+                            new CheckoutScreen(order);
 
                     checkoutScreen.display();
                     ordering = false;
                     break;
+
 
                 case "0":
                     System.out.println("Your order has been canceled.");
