@@ -13,9 +13,10 @@ public class Order {
 
     public void addItem(OrderItem item) {
         items.add(item);}
-    public ArrayList<OrderItem> getItems() {
-        return items;}
 
+    public boolean isEmpty(){
+        return items.isEmpty();
+    }
 
     public double calculateTotal() {
         double total = 0;
@@ -26,10 +27,14 @@ public class Order {
 
     public String getReceiptText() {
         StringBuilder receipt = new StringBuilder();
+
+        receipt.append("\n ----- | RECEIPT | -----\n");
         for (OrderItem item : items) {
-        receipt.append(item.getReceiptText()).append("\n");
+        receipt.append(item.getReceiptText()).append("\n\n");
     }
-    receipt.append("\n Total: $")
+    receipt.append("--------------------------");
+
+    receipt.append("\n Grand Total: $")
             .append(String.format("%.2f", calculateTotal()));
 
         return receipt.toString();}

@@ -1,5 +1,6 @@
 package com.pluralsight.screens;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class HomeScreen {
@@ -11,6 +12,8 @@ public class HomeScreen {
 
         while (isRunning) {
             System.out.println("\u001B[35m\nWelcome to PIZZA-Licious 🍕\u001B[0m");
+            System.out.println();
+            System.out.println(" ===== | HOME SCREEN | ==== ");
             System.out.println();
             System.out.println("1) Place an Order");
             System.out.println("0) Exit");
@@ -27,8 +30,22 @@ public class HomeScreen {
                     break;
 
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Invalid choice. Please try again.❌");
             }
         }
     }
+
+    private void showReceipts(){
+        File folder = new File("receipts");
+        File[] receipts = folder.listFiles();
+
+        if (receipts == null || receipts.length == 0){
+            System.out.println("No receipts found. ❌");
+            return;
+        }
+        for (File receipt : receipts){
+            System.out.println(receipt.getName());
+        }
+    }
+
 }

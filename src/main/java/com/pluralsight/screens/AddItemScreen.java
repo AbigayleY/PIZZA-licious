@@ -74,7 +74,7 @@ public class AddItemScreen {
     }
 
     private void addMeats(Pizza pizza) {
-        System.out.println("\n==== | MEATS | ==== ");
+        System.out.println("==== | MEATS | ==== ");
         for(Meat meat : Meat.values()) {
             System.out.println("Add " + meat + "? (y/n)");
 
@@ -91,7 +91,7 @@ public class AddItemScreen {
     }
 
     private void addCheeses(Pizza pizza) {
-        System.out.println("\n==== | CHEESES | ==== ");
+        System.out.println("==== | CHEESES | ==== ");
         for(Cheese cheese : Cheese.values()) {
             System.out.println("Add " + cheese + "? (y/n)");
 
@@ -108,7 +108,7 @@ public class AddItemScreen {
     }
 
     private void addRegularToppings(Pizza pizza) {
-        System.out.println("\n=== TOPPINGS ===");
+        System.out.println("=== TOPPINGS ===");
         for(RegularTopping topping :
                 RegularTopping.values()) {
             System.out.println("Add " + topping + "? (y/n)");
@@ -119,7 +119,7 @@ public class AddItemScreen {
     }
 
     private void addSauces(Pizza pizza) {
-        System.out.println("\n=== SAUCES ===");
+        System.out.println("=== SAUCES ===");
         for(Sauce sauce : Sauce.values()) {
             System.out.println("Add " + sauce + "? (y/n)");
 
@@ -136,7 +136,7 @@ public class AddItemScreen {
     }
 
     private Drink createDrink() {
-        System.out.println("\nChoose Drink Size:");
+        System.out.println("Choose Drink Size:");
         DrinkSize[] sizes = DrinkSize.values();
         for(int i = 0; i < sizes.length; i++) {
             System.out.println((i + 1) + ") " + sizes[i]);

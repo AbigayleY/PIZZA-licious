@@ -172,7 +172,7 @@ public class Pizza implements OrderItem {
 
         text.append("Meats:\n");
         for (PizzaTopping<Meat> meat : meats){
-            text.append("- ")
+            text.append("   - ")
                     .append(meat.getTopping());
 
             if (meat.isExtra()){
@@ -183,7 +183,7 @@ public class Pizza implements OrderItem {
 
         text.append("Cheeses:\n");
         for (PizzaTopping<Cheese> cheese : cheeses){
-            text.append("- ")
+            text.append("   - ")
                     .append(cheese.getTopping());
             if (cheese.isExtra()){
                 text.append(" (EXTRA) ");
@@ -193,14 +193,14 @@ public class Pizza implements OrderItem {
 
         text.append("Toppings:\n");
         for (RegularTopping topping : toppings){
-            text.append("- ")
+            text.append("   - ")
                     .append(topping)
                     .append("\n");
         }
 
         text.append("Sauces:\n");
         for (Sauce sauce: sauces){
-            text.append("- ")
+            text.append("   - ")
                     .append(sauce)
                     .append("\n");
         }
@@ -208,7 +208,8 @@ public class Pizza implements OrderItem {
             text.append("Stuffed Crust\n");
         }
 
-        text.append("Price: $")
+        text.append("\n--------------------");
+        text.append("\nPizza Price: $")
                 .append(String.format("%.2f", getPrice()))
                 .append("\n");
 

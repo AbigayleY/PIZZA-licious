@@ -21,8 +21,8 @@ public class OrderScreen {
         boolean ordering = true;
 
         while (ordering) {
-            System.out.println("==== | HOME SCREEN | ==== ");
-            System.out.println("\n -----------------------------");
+            System.out.println("\n");
+            System.out.println("==== | ORDER SCREEN | ==== ");
             System.out.println();
             System.out.println("1) Add Item");
             System.out.println("2) Checkout");
@@ -39,7 +39,8 @@ public class OrderScreen {
 
                     if(item != null){
                         order.addItem(item);
-                        System.out.println("Item added! ➕✅ ");
+                        System.out.println("\nItem added! ➕✅ ");
+
                     }
                     break;
 
@@ -121,10 +122,8 @@ private void addPizza(){
             break;
 
         default:
-            crustType = CrustType.REGULAR;
+            crustType = CrustType.REGULAR;}
     }
-
-    System.out.println("Pizza added!🍕");}
 
 private void addDrink(){
     System.out.println("\n ==== | DRINK SELECTION | ==== ");
@@ -156,5 +155,5 @@ private void addDrink(){
 
     System.out.println("");
 
-    System.out.println("Drink added! 🥤");}
+    System.out.println("\nDrink added! 🥤");}
 }
