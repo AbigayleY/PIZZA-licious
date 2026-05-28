@@ -62,16 +62,96 @@ public class OrderScreen {
 
 
 private void addPizza(){
-        Pizza pizza= new Pizza(PizzaSize.MEDIUM,CrustType.REGULAR);
+    System.out.println("\n ==== | PIZZA CREATION | ====");
+    System.out.println();
 
-        pizza.addMeat("Pepperoni");
-        pizza.addCheese("Mozzarella");
+    System.out.println("Choose a Size:");
+    System.out.println("1) Small");
+    System.out.println("2) Medium");
+    System.out.println("3) Large");
+    String sizeChoice = scanner.nextLine();
 
-        order.addItem(pizza);
+    PizzaSize size;
+
+    switch (sizeChoice){
+        case "1":
+            size = PizzaSize.SMALL;
+            break;
+
+        case "2":
+            size = PizzaSize.MEDIUM;
+            break;
+
+        case "3":
+            size = PizzaSize.LARGE;
+            break;
+
+        default:
+            size = PizzaSize.MEDIUM;
+    }
+
+    System.out.println();
+    System.out.println("\n Select a Crust:");
+    System.out.println("1) Thin");
+    System.out.println("2) Regular");
+    System.out.println("3) Thick");
+    System.out.println("4) Cauliflower");
+    String crustChoice = scanner.nextLine();
+
+    CrustType crustType;
+
+    switch (crustChoice){
+        case "1":
+            crustType = CrustType.THIN;
+            break;
+
+        case "2":
+            crustType = CrustType.REGULAR;
+            break;
+
+        case "3":
+            crustType = CrustType.THICK;
+            break;
+
+        case "4":
+            crustType = CrustType.CAULIFLOWER;
+            break;
+
+        default:
+            crustType = CrustType.REGULAR;
+    }
+
     System.out.println("Pizza added!🍕");}
 
 private void addDrink(){
-        Drink drink = new Drink(DrinkSize.MEDIUM, "Coke");
-        order.addItem(drink);
+    System.out.println("\n ==== | DRINK SELECTION | ==== ");
+    System.out.println();
+    System.out.println("Drink Size:");
+    System.out.println("1) Small");
+    System.out.println("2) Medium");
+    System.out.println("3) Large");
+    String choice = scanner.nextLine();
+
+    DrinkSize size;
+
+    switch (choice) {
+        case "1":
+            size = DrinkSize.SMALL;
+            break;
+
+        case "2":
+            size = DrinkSize.MEDIUM;
+            break;
+
+        case "3":
+            size = DrinkSize.LARGE;
+            break;
+
+        default:
+            size = DrinkSize.MEDIUM;
+    }
+
+    System.out.println("");
+
     System.out.println("Drink added! 🥤");}
 }
