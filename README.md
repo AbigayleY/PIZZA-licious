@@ -181,7 +181,7 @@ Editable draw.io file: /diagrams/PIZZALicious.drawio
 
 ---
 # Screenshot Example
-![PIZZA-Licious](screenshots/Screenshot 2026-05-28 201643.png)
+![PIZZA-licious](screenshots/Screenshot 2026-05-28 201643.png)
 
 ---
 
