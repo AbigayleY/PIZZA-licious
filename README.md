@@ -6,18 +6,18 @@ PIZZA-Licious is my second capstone project. It's a POS (Point Of Sales) applica
 # Features ⚙️
 This app includes:
 **1. Home Screen**
-- that lets the user create a new Order or Exit the application
+    - that lets the user create a new Order or Exit the application
 **2. Order Screen**
-- Add an Item
-- Checkout
-- or cancel your order and go back to the Home Screen
+    - Add an Item
+    - Checkout
+    - or cancel your order and go back to the Home Screen
 **3. Add Item Screen**
-- Customize a Pizza (Size, Crust Type, If you want Stuffed Crust, Toppings/Meats/Cheese/Sauces/Meats)
-- Adding a Drink (Size and choosing your own flavor)
-- Add Garlic Knots
+    - Customize a Pizza (Size, Crust Type, If you want Stuffed Crust, Toppings/Meats/Cheese/Sauces/Meats)
+    - Adding a Drink (Size and choosing your own flavor)
+    - Add Garlic Knots
 **4. Checkout Screen**
-- Confirm your order (Creates a receipt and goes back to Home Screen)
-- Cancel (Deletes Order and goes back to Home Screen)
+    - Confirm your order (Creates a receipt and goes back to Home Screen)
+    - Cancel (Deletes Order and goes back to Home Screen)
 
 # 💲Pricing Table 💲 
 Depending on the toppings and size will vary in price
