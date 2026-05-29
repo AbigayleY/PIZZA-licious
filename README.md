@@ -32,8 +32,6 @@ Depending on the toppings and size will vary in price
 | Medium | $12.00 |
 | Large | $16.50 |
 
----
-
 ## Meat Topping Prices 💲
 
 | Size | Regular | Extra |
@@ -41,8 +39,6 @@ Depending on the toppings and size will vary in price
 | Small | $1.00 | $0.50 |
 | Medium | $2.00 | $1.00 |
 | Large | $3.00 | $1.50 |
-
----
 
 ## Cheese Topping Prices 💲
 
@@ -52,15 +48,12 @@ Depending on the toppings and size will vary in price
 | Medium | $1.50 | $0.60 |
 | Large | $2.25 | $0.90 |
 
----
-
 ## Stuffed Crust 💲
 
 | Option | Price |
 |---|---|
 | Stuffed Crust | +$2.00 |
 
----
 
 ## Drink Prices 💲
 
@@ -70,7 +63,6 @@ Depending on the toppings and size will vary in price
 | Medium | $2.50 |
 | Large | $3.00 |
 
----
 
 ## Side Prices 💲
 
@@ -189,7 +181,7 @@ Editable draw.io file: /diagrams/PIZZALicious.drawio
 
 ---
 
-## Tech Used 💻
+# Tech Used 💻
 - Java / Maven
 - IntelliJ IDEA
 - Draw.io
@@ -197,7 +189,7 @@ Editable draw.io file: /diagrams/PIZZALicious.drawio
 
 ---
 
-## ▶️ How to Run
+# ▶️ How to Run
 1. Open in IntelliJ
 2. Navigate to Main.java
 3. Run with the green arrow at the top in the middle!
