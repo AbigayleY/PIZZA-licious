@@ -1,10 +1,11 @@
 package com.pluralsight.screens;
 
+import com.pluralsight.utility.InputHelper;
 import java.io.File;
 import java.util.Scanner;
 
 public class HomeScreen {
-    static Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
     public  void display(){
 
@@ -17,15 +18,17 @@ public class HomeScreen {
             System.out.println();
             System.out.println("1) Place an Order");
             System.out.println("0) Exit");
-            String choice = scanner.nextLine();
 
-            switch (choice) {
-                case "1":
+            //error handling with choice
+            int choice = InputHelper.getIntInput(scanner,0,1);
+
+            switch (choice) { // lets me change my case to int instead of String
+                case 1:
                     OrderScreen orderScreen = new OrderScreen();
                     orderScreen.display();
                     break;
 
-                case "0":
+                case 0:
                     isRunning = false;
                     break;
 

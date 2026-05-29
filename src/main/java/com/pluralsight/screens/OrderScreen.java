@@ -5,17 +5,14 @@ import com.pluralsight.enums.PizzaSize;
 import com.pluralsight.enums.DrinkSize;
 import com.pluralsight.interfaces.OrderItem;
 import com.pluralsight.models.*;
+import com.pluralsight.utility.InputHelper;
 
 import java.util.Scanner;
 
 public class OrderScreen {
-    static Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
-    private Order order;
-
-    OrderScreen() {
-        order = new Order();
-    }
+    private Order order = new Order();
 
     public void display() {
         boolean ordering = true;
@@ -27,24 +24,21 @@ public class OrderScreen {
             System.out.println("1) Add Item");
             System.out.println("2) Checkout");
             System.out.println("0) Cancel Order");
-            String choice = scanner.nextLine();
+
+            //error handling with choice
+            int choice = InputHelper.getIntInput(scanner,0,2);
+
 
             switch (choice) {
-                case "1":
+                case 1:
                     AddItemScreen addItemScreen =
                             new AddItemScreen(scanner);
 
-                    OrderItem item =
-                            addItemScreen.createItem();
-
-                    if(item != null){
-                        order.addItem(item);
-                        System.out.println("\nItem added! ➕✅ ");
-
-                    }
+                    order.addItem(addItemScreen.createItem());
+                        System.out.println("\nItem added! ✅ ");
                     break;
 
-                case "2":
+                case 2:
                     CheckoutScreen checkoutScreen =
                             new CheckoutScreen(order);
 
@@ -53,13 +47,10 @@ public class OrderScreen {
                     break;
 
 
-                case "0":
+                case 0:
                     System.out.println("Your order has been canceled.");
                     ordering = false;
                     break;
-
-                default:
-                    System.out.println("Invalid option. Please try again.");
             }
         }
     }
@@ -153,7 +144,5 @@ private void addDrink(){
             size = DrinkSize.MEDIUM;
     }
 
-    System.out.println("");
-
-    System.out.println("\nDrink added! 🥤");}
+    System.out.println("");}
 }

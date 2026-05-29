@@ -3,15 +3,17 @@ package com.pluralsight.screens;
 import com.pluralsight.enums.*;
 import com.pluralsight.models.*;
 import com.pluralsight.interfaces.OrderItem;
+import com.pluralsight.utility.InputHelper;
 
 import java.util.Scanner;
 
 public class AddItemScreen {
     private Scanner scanner;
 
+    //constructor
     public AddItemScreen(Scanner scanner) {
-        this.scanner = scanner;
-    }
+        this.scanner = scanner;}
+
 
     public OrderItem createItem() {
         System.out.println("\n ==== | ADD ITEM | ==== ");
@@ -19,16 +21,18 @@ public class AddItemScreen {
         System.out.println("1) Pizza");
         System.out.println("2) Drink");
         System.out.println("3) Garlic Knots");
-        String choice = scanner.nextLine();
+
+        //error handling with choice
+        int choice = InputHelper.getIntInput(scanner,1,3);
 
         switch (choice) {
-            case "1":
+            case 1:
                 return createPizza();
 
-            case "2":
+            case 2:
                 return createDrink();
 
-            case "3":
+            case 3:
                 return new GarlicKnots();
 
             default:
@@ -36,103 +40,93 @@ public class AddItemScreen {
         }
     }
 
+
     private Pizza createPizza() {
-        PizzaSize size = choosePizzaSize();
-        CrustType crustType = chooseCrust();
-
-        Pizza pizza = new Pizza(size, crustType);
-
-        addMeats(pizza);
-        addCheeses(pizza);
-        addRegularToppings(pizza);
-        addSauces(pizza);
-        chooseStuffedCrust(pizza);
-
-        return pizza;
-    }
-
-    private PizzaSize choosePizzaSize() {
-        System.out.println("\n Choose Pizza Size:");
         PizzaSize[] sizes = PizzaSize.values();
+        System.out.println("\n Choose Pizza Size:");
 
         for (int i = 0; i < sizes.length; i++) {
             System.out.println((i + 1) + ") " + sizes[i]);
         }
-        int choice = Integer.parseInt((scanner.nextLine()));
-        return sizes[choice - 1];
-    }
 
-    private CrustType chooseCrust() {
-        System.out.println("\n Choose Crust:");
+        //error handling
+        int sizeChoice = InputHelper.getIntInput(scanner,1,sizes.length);
+
+        PizzaSize size = sizes[sizeChoice - 1];
+
+    //CRUSTS--------------------------------------------------
         CrustType[] crusts = CrustType.values();
+        System.out.println("\n Choose Crust:");
 
         for (int i = 0; i < crusts.length; i++) {
             System.out.println((i + 1) + ") " + crusts[i]);
         }
-        int choice = Integer.parseInt(scanner.nextLine());
-        return crusts[choice - 1];
-    }
+        int crustChoice = InputHelper.getIntInput(scanner,1,crusts.length);
+        CrustType crust = crusts[crustChoice -1];
+        Pizza pizza = new Pizza(size,crust);
 
-    private void addMeats(Pizza pizza) {
+    //MEATS----------------------------------------------------
         System.out.println("==== | MEATS | ==== ");
         for(Meat meat : Meat.values()) {
             System.out.println("Add " + meat + "? (y/n)");
 
-            if(scanner.nextLine().equalsIgnoreCase("y")) {
+            //error handling y/n
+            boolean add = InputHelper.getYesNoInput(scanner);
+
+            if (add){
                 System.out.println("Extra " + meat + "? (y/n)");
 
-                boolean extra =
-                        scanner.nextLine()
-                                .equalsIgnoreCase("y");
+                boolean extra = InputHelper.getYesNoInput(scanner);
 
-                pizza.addMeat(
-                        new PizzaTopping<>(meat, extra));}
+                pizza.addMeat(new PizzaTopping<>(meat, extra));}
         }
-    }
 
-    private void addCheeses(Pizza pizza) {
+    //CHEESES-----------------------------------------------------
         System.out.println("==== | CHEESES | ==== ");
         for(Cheese cheese : Cheese.values()) {
             System.out.println("Add " + cheese + "? (y/n)");
 
-            if(scanner.nextLine().equalsIgnoreCase("y")) {
+            //error handling y/n
+            boolean add = InputHelper.getYesNoInput(scanner);
+
+            if (add){
                 System.out.println("Extra " + cheese + "? (y/n)");
 
-                boolean extra =
-                        scanner.nextLine()
-                                .equalsIgnoreCase("y");
+                boolean extra = InputHelper.getYesNoInput(scanner);
 
-                pizza.addCheese(
-                        new PizzaTopping<>(cheese, extra));}
+                pizza.addCheese(new PizzaTopping<>(cheese, extra));}
         }
-    }
 
-    private void addRegularToppings(Pizza pizza) {
+
+    //TOPPINGS-----------------------------------------------------------
         System.out.println("=== TOPPINGS ===");
-        for(RegularTopping topping :
-                RegularTopping.values()) {
+        for(RegularTopping topping : RegularTopping.values()) {
             System.out.println("Add " + topping + "? (y/n)");
 
-            if(scanner.nextLine().equalsIgnoreCase("y")) {
+            boolean add = InputHelper.getYesNoInput(scanner);
+
+            if (add){
                 pizza.addTopping(topping);}
         }
-    }
 
-    private void addSauces(Pizza pizza) {
+
+    //SAUCES----------------------------------------------------------
         System.out.println("=== SAUCES ===");
         for(Sauce sauce : Sauce.values()) {
             System.out.println("Add " + sauce + "? (y/n)");
 
-            if(scanner.nextLine().equalsIgnoreCase("y")) {
-                pizza.addSauce(sauce);}
-        }
+            boolean add = InputHelper.getYesNoInput(scanner);
+
+            if (add){pizza.addSauce(sauce);}
     }
 
-    private void chooseStuffedCrust(Pizza pizza) {
+    //STUFFED CRUST-----------------------------------------------
         System.out.println("\nStuffed crust? (y/n)");
-        pizza.setStuffedCrust(
-                scanner.nextLine()
-                        .equalsIgnoreCase("y"));
+
+        boolean stuffed = InputHelper.getYesNoInput(scanner);
+
+        pizza.setStuffedCrust(stuffed);
+        return pizza;
     }
 
     private Drink createDrink() {
@@ -142,11 +136,11 @@ public class AddItemScreen {
             System.out.println((i + 1) + ") " + sizes[i]);
         }
 
-        int choice = Integer.parseInt(scanner.nextLine());
+        int choice = InputHelper.getIntInput(scanner,1,sizes.length);
         DrinkSize size = sizes[choice - 1];
 
         System.out.println("Enter Flavor:");
-        String flavor = scanner.nextLine();
+        String flavor = InputHelper.getRequiredString(scanner);
 
         return new Drink(size, flavor);
     }

@@ -2,14 +2,16 @@ package com.pluralsight.screens;
 
 import com.pluralsight.models.Order;
 import com.pluralsight.service.ReceiptWriter;
+import com.pluralsight.utility.InputHelper;
 
 import java.util.Scanner;
 
 public class CheckoutScreen {
     private Order order;
 
-    Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
+    //constructor
     public CheckoutScreen(Order order){
         this.order = order;
     }
@@ -18,22 +20,19 @@ public class CheckoutScreen {
         System.out.println("\n ====| CHECKOUT |==== ");
         System.out.println(order.getReceiptText());
         System.out.println();
-        System.out.println("1) Confirm");
-        System.out.println("0) Cancel");
-        String choice=scanner.nextLine();
+        System.out.println("Would you like to confirm your order? (y/n)");
 
-        switch(choice){
-            case "1":
-                ReceiptWriter receiptWriter = new ReceiptWriter();
-                receiptWriter.saveReceipt(order.getReceiptText());
+        boolean confirm = InputHelper.getYesNoInput(scanner);
 
-                System.out.println("Receipt has been saved! 📜");
-                break;
+        if (confirm) {
+            ReceiptWriter receiptWriter = new ReceiptWriter();
+            receiptWriter.saveReceipt(order.getReceiptText());
 
-            case "0":
-                System.out.println("Your order has been canceled.");
-                break;
+            System.out.println("Thank you, Order confirmed! ✅");
+            System.out.println("Receipt has been saved! 📜");
+
+        } else {
+            System.out.println("Your order has been canceled.");
         }
     }
-
 }

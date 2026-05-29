@@ -1,0 +1,41 @@
+
+ ----- | RECEIPT | -----
+MEDIUM REGULAR Pizza
+Meats:
+   - PEPPERONI (EXTRA) 
+   - SAUSAGE (EXTRA) 
+   - HAM (EXTRA) 
+   - BACON (EXTRA) 
+   - CHICKEN (EXTRA) 
+   - MEATBALL (EXTRA) 
+Cheeses:
+   - MOZZARELLA (EXTRA) 
+   - PARMESAN (EXTRA) 
+   - RICOTTA (EXTRA) 
+   - GOAT_CHEESE (EXTRA) 
+   - BUFFALO (EXTRA) 
+Toppings:
+   - ONIONS
+   - MUSHROOMS
+   - BELL_PEPPERS
+   - OLIVES
+   - TOMATOES
+   - SPINACH
+   - BASIL
+   - PINEAPPLE
+   - ANCHOVIES
+Sauces:
+   - MARINARA
+   - ALFREDO
+   - PESTO
+   - BBQ
+   - BUFFALO
+   - OLIVE_OIL
+With Stuffed Crust +
+
+--------------------
+Pizza Price: $42.50
+
+
+--------------------------
+ Grand Total: $42.50

@@ -205,7 +205,7 @@ public class Pizza implements OrderItem {
                     .append("\n");
         }
         if (stuffedCrust){
-            text.append("Stuffed Crust\n");
+            text.append("With Stuffed Crust +\n");
         }
 
         text.append("\n--------------------");
