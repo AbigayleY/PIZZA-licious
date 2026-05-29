@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="D-iiyuoIVXw0XERJZmfW">
-    <mxGraphModel dx="1897" dy="2424" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1932" dy="2220" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -265,6 +265,27 @@
           <mxGeometry relative="1" x="-1" y="3" as="geometry">
             <mxPoint x="50" y="-410" as="sourcePoint" />
             <mxPoint x="210" y="-410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="crEPgXBRtw-aIDCNvuDn-184" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;InputHelper&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+getInput() : int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+getYesNoInput() : boolean&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+getRequiredString(): String&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="160" x="-297.5" y="-860" as="geometry" />
+        </mxCell>
+        <mxCell id="crEPgXBRtw-aIDCNvuDn-185" edge="1" parent="1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-140" y="-800" as="sourcePoint" />
+            <mxPoint x="35" y="-800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="crEPgXBRtw-aIDCNvuDn-186" edge="1" parent="1" source="crEPgXBRtw-aIDCNvuDn-184" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.464;exitY=0.986;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.035;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;" target="crEPgXBRtw-aIDCNvuDn-76" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-230" y="-720" as="sourcePoint" />
+            <mxPoint x="-70" y="-720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="crEPgXBRtw-aIDCNvuDn-187" edge="1" parent="1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="-137.5" y="-860" as="sourcePoint" />
+            <mxPoint x="40" y="-940" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
