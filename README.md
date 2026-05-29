@@ -13,12 +13,12 @@ This app includes:
 - Add an Item
 - Checkout
 - or cancel your order and go back to the Home Screen
-- 
+
 **3. Add Item Screen**
 - Customize a Pizza (Size, Crust Type, If you want Stuffed Crust, Toppings/Meats/Cheese/Sauces/Meats)
 - Adding a Drink (Size and choosing your own flavor)
 - Add Garlic Knots
-- 
+
 **4. Checkout Screen**
 - Confirm your order (Creates a receipt and goes back to Home Screen)
 - Cancel (Deletes Order and goes back to Home Screen)
@@ -203,10 +203,12 @@ Editable draw.io file: /diagrams/PIZZALicious.drawio
 ## 💭 What I learned
 - I learned how to use enums, interfaces, and further work with File I/O
 - How to create a Diagram with Drawio
+- Making an InputHelper to call in different parts of code for error handling!
 - Improve on the skills I already know! 🥳
 
 ---
 
 ## What I could expand upon... ✍️
 - I would of loved to have used more of the branches, I was so used to working on main that I didn't really incorporate it in this project
+- Again, I would've loved to have more time to make the challenge. I might update it in the future to have it!
 - Of course, I look forward to updating this in the future!
