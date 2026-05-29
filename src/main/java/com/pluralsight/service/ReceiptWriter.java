@@ -21,7 +21,7 @@ public class ReceiptWriter {
 
             //Creating timestamp
             String timestamp = LocalDateTime.now()
-                    .format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss"));
+                    .format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss-SSS"));
 
             //Creating File Name
             String fileName = "receipts/" + timestamp + ".txt";
