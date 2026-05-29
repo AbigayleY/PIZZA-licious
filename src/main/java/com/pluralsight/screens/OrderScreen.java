@@ -19,7 +19,7 @@ public class OrderScreen {
 
         while (ordering) {
             System.out.println("\n");
-            System.out.println("==== | ORDER SCREEN | ==== ");
+            System.out.println("\u001B[35m==== | ORDER SCREEN | ====\u001B[0m ");
             System.out.println();
             System.out.println("1) Add Item");
             System.out.println("2) Checkout");
@@ -57,7 +57,7 @@ public class OrderScreen {
 
 
 private void addPizza(){
-    System.out.println("\n ==== | PIZZA CREATION | ====");
+    System.out.println("\u001B[35m\n ==== | PIZZA CREATION | ====\u001B[0m");
     System.out.println();
 
     System.out.println("Choose a Size:");
@@ -117,7 +117,7 @@ private void addPizza(){
     }
 
 private void addDrink(){
-    System.out.println("\n ==== | DRINK SELECTION | ==== ");
+    System.out.println("\u001B[35m\n ==== | DRINK SELECTION | ====\u001B[0m ");
     System.out.println();
     System.out.println("Drink Size:");
     System.out.println("1) Small");

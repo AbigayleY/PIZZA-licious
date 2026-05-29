@@ -16,7 +16,7 @@ public class AddItemScreen {
 
 
     public OrderItem createItem() {
-        System.out.println("\n ==== | ADD ITEM | ==== ");
+        System.out.println("\u001B[35m\n ==== | ADD ITEM | ====\u001B[0m ");
         System.out.println();
         System.out.println("1) Pizza");
         System.out.println("2) Drink");
@@ -66,7 +66,7 @@ public class AddItemScreen {
         Pizza pizza = new Pizza(size,crust);
 
     //MEATS----------------------------------------------------
-        System.out.println("==== | MEATS | ==== ");
+        System.out.println("\u001B[35m==== | MEATS | ====\u001B[0m ");
         for(Meat meat : Meat.values()) {
             System.out.println("Add " + meat + "? (y/n)");
 
@@ -82,7 +82,7 @@ public class AddItemScreen {
         }
 
     //CHEESES-----------------------------------------------------
-        System.out.println("==== | CHEESES | ==== ");
+        System.out.println("\u001B[35m==== | CHEESES | ====\u001B[0m ");
         for(Cheese cheese : Cheese.values()) {
             System.out.println("Add " + cheese + "? (y/n)");
 
@@ -99,7 +99,7 @@ public class AddItemScreen {
 
 
     //TOPPINGS-----------------------------------------------------------
-        System.out.println("=== TOPPINGS ===");
+        System.out.println("\u001B[35m=== TOPPINGS ===\u001B[0m");
         for(RegularTopping topping : RegularTopping.values()) {
             System.out.println("Add " + topping + "? (y/n)");
 
@@ -111,7 +111,7 @@ public class AddItemScreen {
 
 
     //SAUCES----------------------------------------------------------
-        System.out.println("=== SAUCES ===");
+        System.out.println("\u001B[35m=== SAUCES ===\u001B[0m");
         for(Sauce sauce : Sauce.values()) {
             System.out.println("Add " + sauce + "? (y/n)");
 

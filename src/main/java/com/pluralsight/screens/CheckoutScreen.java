@@ -17,10 +17,10 @@ public class CheckoutScreen {
     }
 
     public void display(){
-        System.out.println("\n ====| CHECKOUT |==== ");
+        System.out.println("\u001B[35m\n ====| CHECKOUT |====\u001B[0m ");
         System.out.println(order.getReceiptText());
         System.out.println();
-        System.out.println("Would you like to confirm your order? (y/n)");
+        System.out.println("\u001B[32mWould you like to confirm your order? (y/n)\u001B[0m");
 
         boolean confirm = InputHelper.getYesNoInput(scanner);
 

@@ -1,0 +1,20 @@
+
+ ----- | RECEIPT | -----
+Date: 05/29/2026 10:59 AM
+
+MEDIUM THIN Pizza
+Meats:
+   - PEPPERONI
+Cheeses:
+   - PARMESAN
+Toppings:
+Sauces:
+   - MARINARA
+With Stuffed Crust +
+
+--------------------
+Pizza Price: $17.50
+
+
+--------------------------
+ Grand Total: $17.50
